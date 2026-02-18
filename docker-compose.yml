@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION:-us-east-1}
+      - NOVA_ACT_API_KEY=${NOVA_ACT_API_KEY}
+    volumes:
+      - ./backend:/app
+      - ./logs:/app/logs
+      - ./recordings:/app/recordings
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    build: ./frontend/aiassist
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    volumes:
+      - ./frontend/aiassist:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    command: npm run dev

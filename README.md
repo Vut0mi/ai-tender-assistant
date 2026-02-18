@@ -1,67 +1,18 @@
-# ai-tender-assistant
+# AI Tender Assistant
 
----
+An intelligent tender application assistant powered by Amazon Nova that automates form filling and requirement analysis.
 
-## 🛠️ Tech Stack
+## Features
 
-- **Amazon Nova (via Amazon Bedrock)**
-- **AWS Lambda**
-- **Amazon S3**
-- **Amazon DynamoDB**
-- **API Gateway**
-- **React / Next.js**
-- **Serverless Framework**
+- Automated form filling with Nova Act
+- Requirement analysis with Nova Embeddings
+- Real-time progress updates
+- Digital signature capture
 
----
+## Quick Start
 
-## 🔐 Responsible AI & Compliance
+1. Copy `.env.example` to `.env` and add your credentials
+2. Run with Docker: `docker-compose up`
+3. Visit http://localhost:3000
 
-- The system does **not** submit tenders automatically
-- All auto-filled fields are clearly marked
-- Human review is required before signing
-- No legal authority or certification claims are made
-- Designed to assist, not replace, human judgment
-
----
-
-## 🎥 Demo
-
-A short demo video (~3 minutes) showcases:
-- Tender upload
-- AI analysis
-- Auto-filled forms
-- Signature detection
-- Final output generation
-
-**Hashtag:** `#AmazonNova`
-
----
-
-## 🌍 Impact & Use Cases
-
-- Small and medium enterprises responding to public tenders
-- Procurement preparation teams
-- NGOs and cooperatives with limited administrative capacity
-- Emerging markets where access to bid expertise is limited
-
----
-
-## 🚧 Future Enhancements
-
-- Integration with certified digital signing providers
-- Automated portal submission using Nova Act
-- Multi-language tender support
-- Collaboration features for bid teams
-- Expanded compliance rule libraries
-
----
-
-## 📜 License
-
-This project is provided for hackathon and educational purposes.
-
----
-
-## 🙌 Acknowledgements
-
-Built using **Amazon Nova foundation models** on AWS as part of the Amazon Nova Hackathon.
+## Built for Amazon Nova Hackathon
